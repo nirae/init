@@ -1,0 +1,2 @@
+echo "Le fichier est /etc/hosts\n"
+cat /etc/hosts

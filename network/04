@@ -1,0 +1,1 @@
+netstat -rn | grep "default.*[0-9]*\.[0-9]*" | cut -c 20- | cut -d ' ' -f 1

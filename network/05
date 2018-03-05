@@ -1,0 +1,7 @@
+echo "liste des serveurs DNS de l'adresse slash16.org : \n"
+host -t NS slash16.org
+echo "\nOn cherche l'IP pour chaque serveur : \n"
+host -t A ns-1989.awsdns-56.co.uk
+host -t A ns-144.awsdns-18.com
+host -t A ns-1236.awsdns-26.org
+host -t A ns-686.awsdns-21.net

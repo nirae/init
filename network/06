@@ -1,0 +1,2 @@
+echo "Les adresses des serveurs DNS utilises par la machine sont dans : /etc/resolve.conf\n"
+cat /etc/resolve.conf

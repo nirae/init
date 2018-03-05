@@ -1,0 +1,32 @@
+commande : dig 42.fr
+
+; <<>> DiG 9.8.3-P1 <<>> 42.fr
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 63735
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 4, ADDITIONAL: 4
+
+;; QUESTION SECTION:
+;42.fr.				IN	A
+
+;; ANSWER SECTION:
+42.fr.			3600	IN	A	163.172.250.12
+42.fr.			3600	IN	A	10.52.1.11
+42.fr.			3600	IN	A	163.172.250.11
+
+;; AUTHORITY SECTION:
+42.fr.			3600	IN	NS	pns2.42.fr.
+42.fr.			3600	IN	NS	ns1.42.fr.
+42.fr.			3600	IN	NS	pns1.42.fr.
+42.fr.			3600	IN	NS	ns2.42.fr.
+
+;; ADDITIONAL SECTION:
+ns1.42.fr.		3600	IN	A	10.51.1.3
+ns2.42.fr.		3600	IN	A	10.51.1.4
+pns1.42.fr.		3600	IN	A	10.51.1.42
+pns2.42.fr.		3600	IN	A	10.51.1.43
+
+;; Query time: 1 msec
+;; SERVER: 10.51.1.42#53(10.51.1.42)
+;; WHEN: Mon Mar  5 17:09:21 2018
+;; MSG SIZE  rcvd: 209
