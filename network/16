@@ -1,0 +1,5 @@
+Il faudrait modifier le fichier /etc/hosts pour y ajouter :
+
+46.19.122.85 intra.42.fr
+
+Mais on a pas les droits root sur les macs de l'ecole....

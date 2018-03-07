@@ -1,0 +1,2 @@
+Les cles sont dans le dossier .ssh du home de l'user qui veut se connecter. Dans le fichier authorized_keys
+Pour ma VM vagrand, la cle RSA est dans ~/.ssh/authorized_keys

@@ -1,0 +1,3 @@
+echo "Avec la commande traceroute on va voir le chemin complet que prend notre paquet\n"
+echo "On va voir que "
+traceroute slash16.org
