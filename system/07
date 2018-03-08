@@ -1,1 +1,1 @@
-ps ax | grep sshd
+pidof sshd

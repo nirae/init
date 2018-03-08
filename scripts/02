@@ -1,0 +1,10 @@
+#! /bin/sh
+
+# Commande Cron
+# crontab -l pour voir le contenu du fichier
+# crontab -e pour l'editer
+# Faire la tache cron pour root
+# 0 4 * * 1 /home/coucou/Lab/02
+
+apt-get update >> /var/log/update_script.log 2>&1
+apt-get upgrade >> /var/log/update_script.log 2>&1

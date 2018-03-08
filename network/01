@@ -1,1 +1,1 @@
-ifconfig | grep "^[a-z0-9]*:" | cut -d : -f 1
+ifconfig -l
