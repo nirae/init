@@ -1,1 +1,2 @@
+# sudo -b tail -f /var/log/syslog &
 nohup sudo -b tail -f /var/log/syslog

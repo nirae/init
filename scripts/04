@@ -1,0 +1,9 @@
+#! /bin/sh
+
+original="8f111d100ea459f68d333d63a8ef2205"
+current=`md5sum /etc/crontab | cut -d ' ' -f1`
+
+if [ $original != $current ]
+then
+	echo "The file /etc/crontab has been modified" | mailx -s "The file /etc/crontab has been modified" root
+fi

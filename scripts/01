@@ -3,7 +3,7 @@
 while read -r line
 do
 	echo "<---------- User ------------->"
-	printf "Login : $login"
+	printf "Login : "
 	printf $line | cut -d ':' -f 1
 	printf "UID : "
 	printf $line | cut -d ':' -f 3

@@ -1,3 +1,2 @@
-echo "On fait : host 10.51.1.253\n"
-host 10.51.1.253
-echo "\nOn voit que l'adresse est dhcp.42.fr, on peut donc en conclure que c'est un serveur DHCP (qui fournit des adresse IP dynamiquement aux machines)\n"
+On fait : host 10.51.1.253
+On voit que l'adresse est dhcp.42.fr, on peut donc en conclure que c'est un serveur DHCP (qui fournit des adresse IP dynamiquement aux machines)

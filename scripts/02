@@ -7,4 +7,4 @@
 # 0 4 * * 1 /home/coucou/Lab/02
 
 apt-get update >> /var/log/update_script.log 2>&1
-apt-get upgrade >> /var/log/update_script.log 2>&1
+apt-get upgrade -y >> /var/log/update_script.log 2>&1
