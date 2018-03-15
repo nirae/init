@@ -2,11 +2,32 @@
 
 # Modifier le fichier crontab de root : sudo crontab -e
 # 00 00 * * * /home/vagrant/04
+# 
+# Solution securite :
+# Au premier lancement, creer le fichier contenant le hash :
+#	sudo su; touch /etc/.crontab.hash; echo `md5sum /etc/crontab` >> /etc/.crontab.hash; exit;
 
-original="8f111d100ea459f68d333d63a8ef2205"
-current=`md5sum /etc/crontab | cut -d ' ' -f1`
-
-if [ $original != $current ]
+if [ -f /etc/.crontab.hash ]
 then
-	echo "The file /etc/crontab has been modified" | mailx -s "Your file /etc/crontab" root
+	original=`head -n 1 /etc/.crontab.hash`
+	current=`md5sum /etc/crontab`
+
+	if [ $original != $current ]
+	then
+		echo "The file /etc/crontab has been modified, a new hash has been created" | mailx -s "Your file /etc/crontab" root
+		sudo rm -rf /etc/.crontab.hash
+		sudo touch /etc/.crontab.hash
+		sudo echo `md5sum /etc/crontab` >> /etc/.crontab.hash
+	fi
+else
+	echo "The verification file /etc/.crontab.hash was not found when the checking of the /etc/crontab file. Please verify the file" | mailx -s "The file .crontab.hash was not found" root
 fi
+
+#original="8f111d100ea459f68d333d63a8ef2205"
+#current=`md5sum /etc/crontab | cut -d ' ' -f1`
+
+#if [ $original != $current ]
+#then
+#	echo "The file /etc/crontab has been modified, a new hash has been created" | mailx -s "Your file /etc/crontab" root
+#	original=$current
+#fi
