@@ -1,6 +1,6 @@
 #! /bin/sh
 
-sudo apt-get install figlet boxes toilet -y >> /dev/null 2>&1
+# sudo apt-get install figlet boxes toilet -y >> /dev/null 2>&1
 
 clear
 figlet 42 | boxes -pl11 -d cat | toilet -f term --gay
